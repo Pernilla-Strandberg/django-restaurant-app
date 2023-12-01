@@ -58,7 +58,10 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'restaurant'
+    # 'bootstrap5',
+    # 'bootstrap_datepicker_plus',
+    'restaurant',
+    'accounts'
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
