@@ -1,22 +1,29 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse
 
-# Create your models here.
 
 class BookingModel(models.Model):
 
     # Fields
-    customer = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="customer_bookings"
-    )
-    # FK used because a booking can only have one customer but multiple
-    # bookings can have the same customer
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="user_bookings", default=1)
+    # FK used because a booking can only have one user but multiple
+    # bookings can have the same user
 
-    first_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=50)
-    email = models.EmailField()
-    day = models.DateField(null=True, blank=True)
-    time = models.TimeField(null=True, blank=True)
+    first_name = models.CharField(max_length=50, default='First name')
+    last_name = models.CharField(max_length=50, default='Last name')
+    email = models.EmailField(default='example@example.com')
+    day = models.DateField('Visiting date')
+
+    TIME = (
+        ('6 PM', '6 PM'),
+        ('7 PM', '7 PM'),
+        ('8 PM', '8 PM'),
+        ('9 PM', '9 PM'),
+        ('10 PM', '10 PM'),
+    )
+
+    time = models.CharField(max_length=10, choices=TIME, default='6 PM')
     created_on = models.DateTimeField(auto_now_add=True)
 
     TOTAL_GUESTS = (
@@ -36,7 +43,6 @@ class BookingModel(models.Model):
     guests = models.CharField(
         max_length=4,
         choices=TOTAL_GUESTS,
-        blank=True,
         default='2',
         help_text='Select number of guests',
     )
@@ -44,8 +50,13 @@ class BookingModel(models.Model):
     # Metadata
     class Meta:
         ordering = ['day', 'time']
+        verbose_name = "Booking"
 
     # Methods
     def __str__(self):
-        """String for representing the model object (in Admin site etc.)."""
-        return f'{self.first_name}, {self.last_name}, {self.guests}, {self.day}, {self.time}, {self.created_on}'
+        """String to represent the model object"""
+        return f'{self.first_name} {self.last_name}, {self.day} at {self.time}'
+
+    def get_absolute_url(self):
+        # return reverse('booking_list', args=(str(self.id)))
+        return reverse('author-detail', kwargs={'pk': self.pk})
