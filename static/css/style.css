@@ -54,6 +54,44 @@ h1 {
     text-decoration: underline;
 }
 
+/* contact */
+
+.form-control {
+  box-shadow: none !important;
+  outline: none !important;
+  border: 2px solid #cecece;
+  height: 38px;
+}
+.form-control:hover ,.form-control:focus{
+  border-color: #97a0af;
+}
+
+.error {
+  margin: 8px 0px;
+  display: none;
+  color: red;
+}
+#ajaxsuccess {
+  font-size: 16px;
+  width: 100%;
+  display: none;
+  clear: both;
+  margin: 8px 0px;
+}
+.con_sub_text {
+  margin: 20px 0px;
+  font-size: 15px;
+}
+.contact-detail-box {
+  margin-bottom: 50px;
+}
+
+.contact-detail-box address {
+  font-size: 14px;
+}
+.contact-map {
+  background-color: #ededed;
+}
 
   /* Colors */
 
@@ -66,7 +104,7 @@ h1 {
   .navbar-custom .navbar-nav li a:focus,
   .navbar-custom .navbar-nav li a:active,
   .navbar-custom .navbar-nav li.active a {
-    color: #ffc107;
+    color: #ffffff;
   }
 
   .btn-primary {
@@ -87,8 +125,9 @@ h1 {
   .open>.dropdown-toggle.btn-primary.focus,
   .open>.dropdown-toggle.btn-primary:focus,
   .open>.dropdown-toggle.btn-primary:hover {
-    background-color: #ffc107 !important;
+    background-color: #ff9900 !important;
     border: 1px solid #ffc107 !important;
+    color: #ffffff;
   }
 
   .btn-shadow.btn-primary {
@@ -183,4 +222,19 @@ hr {
   margin: 0 auto;
   opacity: 0.5;
   border-top: 0;
+}
+
+/* Links */
+a {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  text-decoration: none;
 }
