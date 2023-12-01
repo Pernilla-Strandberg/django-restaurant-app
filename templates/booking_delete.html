@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Deletion Successful{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+<div class="container shadow mt-5 p-5">
+    <div class="row">
+        <div class="col-md-8 mt-3 offset-md-2">
+            <h2 class="pt-2">Deletion Successful</h2>
+            <p class="fst-italic">Logged in as: {{ user.username }}</p>
+            <p class="mb-4">Your booking has been successfully deleted.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 mt-3 offset-md-2">
+            <a href="{% url 'booking_list' %}" class="btn btn-primary text-white">Back to Overview</a>
+            <a href="{% url 'booking_create' %}" class="btn btn-primary text-white ms-2">Book another table</a>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}
