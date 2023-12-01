@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Sign Up{% endblock %}
+{% load crispy_forms_filters %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container shadow mt-5 p-5">
+  <div class="row">
+    <div class="col-md-8 mt-3 offset-md-2">
+      {% if user.is_authenticated %}
+      <h2 class="pt-2">Welcome back!</h2>
+      <p class="fst-italic">Logged in as: {{ user.username }}</p>
+      <a href="{% url 'booking_list' %}" class="btn btn-primary text-white">My Bookings</a>
+      {% else %}
+      <h2 class="pt-2">Sign up</h2>
+      <p>To book a table you need to create an account.</p>
+        <form method="post">
+          {% csrf_token %}
+          {{form|crispy}}
+          <button type="submit" class="btn btn-primary text-white">Sign Up</button>
+        </form>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endblock %}

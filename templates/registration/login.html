@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block content %}
+{% load crispy_forms_filters %}
+{% load crispy_forms_tags %}
+
+<div class="container shadow mt-5 p-5">
+  <div class="row">
+    <div class="col-md-8 mt-3 offset-md-2">
+      {% if form.errors %}
+      <p>Your username and password didn't match. Please try again.</p>
+      {% endif %}
+
+      {% if next %}
+      {% if user.is_authenticated %}
+      <p>Your account doesn't have access to this page. To proceed,
+      please login with an account that has access.</p>
+      {% endif %}
+      {% endif %}
+      <h2 class="pt-2">Welcome back!</h2>
+      <p>To manage yor table reservation, login with your username and password created when booking.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 mt-3 offset-md-2">  
+      <form method="post" action="{% url 'login' %}">
+      {% csrf_token %}
+      {{form|crispy}}
+      <input type="submit" value="login" class="btn btn-primary text-white">
+      <input type="hidden" name="next" value="{{ next }}">
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
