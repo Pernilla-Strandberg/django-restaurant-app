@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% block title %}Los Platos Chilenos{% endblock %}
 {% block content %}
 {% load crispy_forms_tags %}
 
@@ -92,7 +92,7 @@
       <!-- Dish 1 -->
       <div class="col-xl-3 col-md-6 mb-4">
         <div class="card border-0 shadow">
-          <img src="{% static 'img/service1.jpg' %}" class="card-img-top" alt="...">
+          <img src="{% static 'images/chorillana.jpg' %}" class="card-img-top" alt="Image of Chorillana dish">
           <div class="card-body text-center">
             <h5 class="card-title mb-0">Chorillana</h5>
             <div class="card-text text-black-50">French fries, finely cut onion, spicy sausage, beefsteak and, crowning
@@ -103,7 +103,7 @@
       <!-- Dish 2 -->
       <div class="col-xl-3 col-md-6 mb-4">
         <div class="card border-0 shadow">
-          <img src="{% static 'img/service2.jpg' %}" class="card-img-top" alt="...">
+          <img src="{% static 'images/pastel_de_choclo.jpg' %}" class="card-img-top" alt="...">
           <div class="card-body text-center">
             <h5 class="card-title mb-0">Pastel de Choclo</h5>
             <div class="card-text text-black-50">French fries, finely cut onion, spicy sausage, beefsteak and, crowning
@@ -114,7 +114,7 @@
       <!-- Dish 3 -->
       <div class="col-xl-3 col-md-6 mb-4">
         <div class="card border-0 shadow">
-          <img src="{% static 'img/service3.jpg' %}" class="card-img-top" alt="...">
+          <img src="{% static 'images/empanada_plate.jpg' %}" class="card-img-top" alt="...">
           <div class="card-body text-center">
             <h5 class="card-title mb-0">Plato de Empanadas</h5>
             <div class="card-text text-black-50">Plate with empanadas. Popular pastry filled with diced meat/chicken,
@@ -126,7 +126,7 @@
       <!-- Dish 4 -->
       <div class="col-xl-3 col-md-6 mb-4">
         <div class="card border-0 shadow">
-          <img src="{% static 'img/service4.jpg' %}" class="card-img-top" alt="...">
+          <img src="{% static 'images/chorillana.jpg' %}" class="card-img-top" alt="...">
           <div class="card-body text-center">
             <h5 class="card-title mb-0">Sopa de Mariscos</h5>
             <div class="card-text text-black-50">Delicious seafood soup made of hake, mussels, onion and garlic with
@@ -140,4 +140,36 @@
   </div>
 </section>
 
+<section class="container" style="margin-block:150px;" id="contact">
+  <hr class="my-5">
+  <!----- Contact -->
+  <div class="container px-4 py-5" id="custom-cards">
+    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+
+      <div class="center-form">
+        <div class="contact-detail-box">
+          <i class="far fa-envelope text-colored fa-3x"></i>
+          <h4>Get in Touch</h4>
+          <abbr title="Phone">P:</abbr> (123) 456-7890<br>
+          E: <a href="mailto:email@email.com" class="text-muted">email@email.com</a>
+        </div>
+    </div>
+
+      <div class="col">
+        <div class="center-form">
+          <div class="contact-detail-box">
+            <i class="fa fa-map-marker fa-3x text-colored"></i>
+            <h4>Our Location</h4>
+  
+            <address>
+              South Avenue 16<br>
+              412 12 Gothenburg<br>
+              Sweden
+            </address>
+          </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
 {% endblock content %}
