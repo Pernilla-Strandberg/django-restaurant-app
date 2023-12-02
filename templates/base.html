@@ -4,41 +4,44 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Los Platos Chilenos</title>
-    <meta name="description" content="Fictive restaurant site with a booking system and AI-generated images.">
-    
-    
+    <meta name="description" content="Fictive restaurant site with a booking system and AI-generated images." />
+
     <!-- Google Font links -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet" />
     <!-- Bootstrap icons 1.11.2 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" />
     <!-- Bootstrap 5.3.2 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <!-- Popper 2.11.8 -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <!-- Bootstrap 5.3.2 javascript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <!-- EmailJS library -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
     </script>
+    <!-- Bootstrap 5.3.2 javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+    <!-- EmailJS library -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
         (function () {
             emailjs.init("pEhYAD1_vO6JcxTff");
         })();
     </script>
     <!-- Customized css -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
 </head>
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark py-3" aria-label="Navbar">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark py-3" aria-label="Navbar">
         <div class="container-fluid">
             <a class="navbar-brand" href="{% url 'index' %}"><span class="brand">Los Platos Chilenos</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
@@ -93,25 +96,73 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Main content -->
     <main class="flex-shrink-0 main-bg">
         {% block content %}
         <!-- Content -->
         {% endblock content %}
     </main>
-    
+
+    <!-- Footer -->
+    <div class="container" id="contact">
+        <footer class="py-5">
+            <div class="row">
+                <div class="col-md-5 mb-3">
+                    <h5><i class="bi bi-geo-alt"></i> Our Location</h5>
+                    <p class="flex-column">
+                        <address>
+                            South Avenue 16<br>
+                            412 12 Gothenburg<br>
+                            Sweden
+                        </address>
+                    </p>
+                </div>
+
+                <div class="col-md-5 offset-md-2 mb-3">
+                    <form onsubmit="return sendMail(this);">
+                        <h5>Contact Us</h5>
+                        
+                              <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="emailaddress" placeholder="name@example.com">
+                                <label for="floatingInput">Email address</label>
+                              </div>
+                              <div class="form-floating">
+                                <textarea class="form-control" placeholder="Leave your message here" id="message" style="height: 100px"></textarea>
+                                <label for="message">Message</label>
+                              </div>
+                              <button type="submit" class="btn btn-secondary center-block mt-2">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                <a class="brand" href="{% url 'index' %}">Los Platos Chilenos</a>
+                <ul class="list-unstyled d-flex align-self-end">
+                    <li class="ms-3">
+                        <a class="link-dark" href="#"><i class="bi bi-twitter-x"></i></a>
+                    </li>
+                    <li class="ms-3">
+                        <a class="link-dark" href="#"><i class="bi bi-instagram"></i></a>
+                    </li>
+                    <li class="ms-3">
+                        <a class="link-dark" href="#"><i class="bi bi-facebook"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
     {% block scripts %}{% endblock %}
     <!-- Script -->
     <script>
         setTimeout(function () {
-            let messages = document.getElementById('msg');
+            let messages = document.getElementById("msg");
             let alert = new bootstrap.Alert(messages);
             alert.close();
         }, 2000);
     </script>
     <script src="{% static 'js/sendEmail.js' %}"></script>
 </body>
+
 </html>
-
-
