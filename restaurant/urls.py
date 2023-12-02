@@ -1,7 +1,13 @@
-from . import views
-from .views import BookingListView, BookingDetailView, BookingCreateView, BookingUpdateView, BookingDeleteView
-from django.urls import path, include
+from django.urls import include, path
 
+from . import views
+from .views import (
+    BookingCreateView,
+    BookingDeleteView,
+    BookingDetailView,
+    BookingListView,
+    BookingUpdateView,
+)
 
 urlpatterns = [
 
