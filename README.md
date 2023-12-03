@@ -6,6 +6,8 @@ This is a fictive restaurant booking app which is developed based on user storie
 
 <h2 align="center"><img src="[https://bild på app i olika format](https://github.com/Pernilla-Strandberg/django-restaurant-app/blob/main/readme_img/admin.png)"></h2>
 
+![alt](https://github.com/Pernilla-Strandberg/django-restaurant-app/blob/main/readme_img/admin.png)
+
 ## User Experience (UX)
 
 - ### User stories
