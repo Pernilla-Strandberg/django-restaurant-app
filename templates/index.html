@@ -6,23 +6,26 @@
 
 {% if not user.is_authenticated %}
 <!--- CTA --->
-<div class="bg bg-secondary pt-5 pb-5">
+<div style="background-image: url('{% static 'images/hero_buffet.jpg' %}')"
+height = "100vh" class="bg-image">
+  <div class="mask" style="background-color: rgba(0, 0, 0, 0.8); 
+background-image: linear-gradient(to right, rgba(21, 21, 21, 0), rgba(23, 23, 23, 0.7), rgb(23, 23, 23))">
+
   <div class="container col-xxl-8 px-4 py-5">
     <div class="row flex-lg-row align-items-center g-5 py-5">
       <div class="col-lg-6">
-        <h1 class="display-1 dark-text-body-emphasis lh-1 mb-5 cta-text">Curious about Chilean food culture?</h1>
+        <h1 class="display-1 text-white lh-1 mb-5 cta-text">Curious about Chilean food culture?</h1>
         <div class="d-grid gap-2 d-md-flex justify-content-md-start">
           <a type="button" class="btn btn-primary btn-lg px-5 py-3 me-md-2" href="{% url 'account_signup' %}">Book a Table</a>
         </div>
       </div>
     </div>
   </div>
+  </div>
 </div>
+
 <!--- End CTA -->
 {% endif %}
-
-
-
 
 <section class="container" style="margin-block:150px;" id="about">
   <hr class="my-5">
@@ -126,7 +129,7 @@
       <!-- Dish 4 -->
       <div class="col-xl-3 col-md-6 mb-4">
         <div class="card border-0 shadow">
-          <img src="{% static 'images/chorillana.jpg' %}" class="card-img-top" alt="...">
+          <img src="{% static 'images/soup.jpg' %}" class="card-img-top" alt="...">
           <div class="card-body text-center">
             <h5 class="card-title mb-0">Sopa de Mariscos</h5>
             <div class="card-text text-black-50">Delicious seafood soup made of hake, mussels, onion and garlic with
