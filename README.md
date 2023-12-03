@@ -4,15 +4,16 @@
 
 This is a fictive restaurant booking app which is developed based on user stories and with a focus on responsiveness and accessibility.
 
-<h2 align="center"><img src="[https://bild på app i olika format](https://github.com/Pernilla-Strandberg/django-restaurant-app/blob/main/readme_img/admin.png)"></h2>
 
-![alt](https://github.com/Pernilla-Strandberg/django-restaurant-app/blob/main/readme_img/admin.png)
+![Mockup Responsive](https://github.com/Pernilla-Strandberg/django-restaurant-app/blob/main/readme_img/all-devices-black.png)
 
 ## User Experience (UX)
 
 - ### User stories
 
   - All user stories can be found on GitHub in a project specific Kanban board. [Visit Project](https://github.com/users/Pernilla-Strandberg/projects/2)
+
+![User story cards](https://github.com/Pernilla-Strandberg/django-restaurant-app/blob/main/readme_img/userstory.png) ![User story project](https://github.com/Pernilla-Strandberg/django-restaurant-app/blob/main/readme_img/userstory_project.png)
 
 ## Features
 
@@ -22,7 +23,7 @@ This is a fictive restaurant booking app which is developed based on user storie
 
 - Automated unit tests - Assures the form, view and model files response as expected so that the user's experience is as simple and positive as possible.
 
-<img src="![Admin view]([django-restaurant-app/readme_img/admin.png](https://github.com/Pernilla-Strandberg/django-restaurant-app/blob/main/readme_img/admin.png))"> <img src="https://bild på app i olika format"><img src="https://bild på app i olika format"><img src="https://bild på app i olika format">
+![alt](https://github.com/Pernilla-Strandberg/django-restaurant-app/blob/main/readme_img/home_medium.png) ![alt](https://github.com/Pernilla-Strandberg/django-restaurant-app/blob/main/readme_img/mybookings.png) ![alt](https://github.com/Pernilla-Strandberg/django-restaurant-app/blob/main/readme_img/bookingdetail.png) ![alt](https://github.com/Pernilla-Strandberg/django-restaurant-app/blob/main/readme_img/signup.png) ![alt](https://github.com/Pernilla-Strandberg/django-restaurant-app/blob/main/readme_img/bookingform.png) ![alt](https://github.com/Pernilla-Strandberg/django-restaurant-app/blob/main/readme_img/editview1.png) ![alt](https://github.com/Pernilla-Strandberg/django-restaurant-app/blob/main/readme_img/deleteview.png) ![alt](https://github.com/Pernilla-Strandberg/django-restaurant-app/blob/main/readme_img/editview1.png) ![alt](https://github.com/Pernilla-Strandberg/django-restaurant-app/blob/main/readme_img/admin.png)
 
 ### Upcoming features
 
@@ -70,17 +71,17 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 ### Automated testing
 
     #### PYtest - Errors to be fixed in the near future
-    <h2 align="center"><img src="https://bild på tester"> <img src="https://bild på tester"></h2>
-
+    ![alt](https://github.com/Pernilla-Strandberg/django-restaurant-app/blob/main/readme_img/pytest.png)
 
 ### Manual testing
 
     #### Browsers and different screensizes
-    <h2 align="center"><img src="https://bild på tester"> <img src="https://bild på tester"> <img src="https://bild på tester"></h2>
+    ![alt](https://github.com/Pernilla-Strandberg/django-restaurant-app/blob/main/readme_img/menu.png)![alt](https://github.com/Pernilla-Strandberg/django-restaurant-app/blob/main/readme_img/home_cards.png)
 
 ### Further Testing
 
-- Friends and family members tested the app and pointed out some bugs that are presented under "Known Bugs".
+- Form validation
+![alt](https://github.com/Pernilla-Strandberg/django-restaurant-app/blob/main/readme_img/validate1.png) ![alt](https://github.com/Pernilla-Strandberg/django-restaurant-app/blob/main/readme_img/validate2.png) ![alt](https://github.com/Pernilla-Strandberg/django-restaurant-app/blob/main/readme_img/validate3.png)
 
 ## Deployment
 
