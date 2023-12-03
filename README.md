@@ -20,7 +20,7 @@ This is a fictive restaurant booking app which is developed based on user storie
 
 - Automated unit tests - Assures the form, view and model files response as expected so that the user's experience is as simple and positive as possible.
 
-<img src="![Admin view](readme_img/admin.png)"> <img src="https://bild på app i olika format"><img src="https://bild på app i olika format"><img src="https://bild på app i olika format">
+<img src="![Admin view](django-restaurant-app/readme_img/admin.png)"> <img src="https://bild på app i olika format"><img src="https://bild på app i olika format"><img src="https://bild på app i olika format">
 
 ### Upcoming features
 
